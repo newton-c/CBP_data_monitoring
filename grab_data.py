@@ -8,13 +8,6 @@ import re
 import pandas as pd
 import os
 
-# If you cloned this repo and haven't changed the file structure,
-# this file should be in the scripts/ folder of the working
-# directory. The next two lines pulls you our of the scritps/ 
-# folder into the working directory
-#working_dir = os.getcwd()[:-7]
-#os.chdir(working_dir)
-
 # Specify the URL for Customs and Border Patrol's data
 url = "http://www.cbp.gov/document/stats/nationwide-drug-seizures"
 
@@ -97,5 +90,4 @@ def compare_dates(latest_date):
         raise ValueError("Error:\nSomething is wrong. The current dataset\nseems to be more recent than the most\nrecent data. You should investigate whether\nthe site structure has changed or a dataset\nwas removed.")
         
         
-if __name__ == '__main__':
-    compare_dates(latest_date)
+compare_dates(latest_date)
