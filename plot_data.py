@@ -126,3 +126,7 @@ fig.update_yaxes(showgrid=False, zeroline=True,
                  title=None)
 #fig.show()
 fig.write_html("figs/meth.html")
+
+import chart_studio.tools as tls
+
+tls.get_embed('https://public-ic-resources.s3.us-east-2.amazonaws.com/cbp_meth.html')
